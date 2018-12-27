@@ -1,0 +1,10 @@
+<%= form_for @ingredient do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :type %>
+  <%= f.select :ingredient_type, options_for_select(@ingredient_types) %>
+
+  <%= f.submit %>
+
+<% end %>
