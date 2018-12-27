@@ -1,0 +1,22 @@
+<h1>New Recipe</h1>
+
+<% if @recipe.errors.any? %>
+    <ul>
+    <% @recipe.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @recipe do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :directions %>
+  <%= f.text_area :directions %><br>
+
+  <%= f.label :created_by %>
+  <%= collection_select(:recipe, :user_id, @users, :id, :name) %><br>
+
+  <%= f.submit %>
+<% end %>
