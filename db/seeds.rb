@@ -42,3 +42,7 @@ UserIngredient.create(user_id: 3, ingredient_id: 9)
 UserIngredient.create(user_id: 4, ingredient_id: 10)
 UserIngredient.create(user_id: 4, ingredient_id: 11)
 UserIngredient.create(user_id: 4, ingredient_id: 1)
+
+RecipeIngredient.create(recipe_id: 1, ingredient_id: 1)
+RecipeIngredient.create(recipe_id: 1, ingredient_id: 2)
+RecipeIngredient.create(recipe_id: 1, ingredient_id: 4)
